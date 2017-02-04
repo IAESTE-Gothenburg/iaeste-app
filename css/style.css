@@ -27,7 +27,8 @@ header {
 main {
   height: 80vh;
   top: 10vh;
-  overflow: scroll; }
+  overflow: scroll;
+  background: rgba(0, 128, 204, 0.1); }
 
 footer {
   bottom: 0; }
@@ -74,9 +75,9 @@ footer {
   width: 95%;
   height: 90px;
   padding: 10px 3px;
-  background: rgba(0, 94, 151, 0.4);
+  background: rgba(255, 250, 250, 0.8);
   border-radius: 2px;
-  margin: 5px auto;
+  margin: 10px auto;
   color: #383838; }
   .internship .left-content, .internship .right-content {
     display: inline-block; }
