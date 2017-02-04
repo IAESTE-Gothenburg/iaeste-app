@@ -28,7 +28,8 @@ main {
   height: 80vh;
   top: 10vh;
   overflow: scroll;
-  background: rgba(0, 128, 204, 0.1); }
+  background: rgba(0, 128, 204, 0.1);
+  z-index: 1; }
 
 footer {
   bottom: 0; }
@@ -57,19 +58,35 @@ footer {
   justify-content: center;
   align-items: center; }
 
+#filter-check:checked ~ #filter-options {
+  display: block; }
+
 #filter-options {
   display: none;
-  position: absolute;
-  top: 8.5vh;
+  position: relative;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   width: 90vw;
   min-height: 30vh;
   max-height: 75vh;
-  overflow: scroll;
-  margin: auto;
   background: white;
   border: 2px solid lightgrey;
   border-radius: 5px; }
+  #filter-options section {
+    width: inherit;
+    height: inherit;
+    overflow: scroll; }
+  #filter-options::before {
+    content: "\a";
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 15px solid white;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .internship {
   width: 95%;
@@ -79,7 +96,8 @@ footer {
   border-radius: 2px;
   margin: 10px auto;
   color: #383838;
-  border: 1px solid lightgrey; }
+  border: 1px solid lightgrey;
+  z-index: 10; }
   .internship .left-content, .internship .right-content {
     display: inline-block; }
     .internship .left-content h2, .internship .left-content h3, .internship .right-content h2, .internship .right-content h3 {
