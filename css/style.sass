@@ -7,6 +7,7 @@ $highlight: rgba(50,50,50,0.3)
 
 body
 	margin: 0
+	font-family: 'Helvetica Neue', sans-serif
 
 header, footer, main
 	position: fixed
@@ -32,6 +33,7 @@ header
 main
 	height: 80vh
 	top: 10vh
+	overflow: scroll
 
 footer
 	bottom: 0
@@ -74,3 +76,31 @@ footer
 	background: white
 	border: 2px solid lightgrey
 	border-radius: 5px
+
+.internship
+	width: 95%
+	padding: 10px 3px
+	background: rgba(0,94,151,0.4)
+	border-radius: 2px
+	margin: 5px auto
+	color: #383838
+	.left-content, .right-content
+		display: inline-block
+		h2, h3
+			margin: 0
+			margin-left: 5px
+		h2
+			font-size: 0.8rem
+			margin-bottom: 2px
+		h3
+			font-size: 0.6rem
+			margin-bottom: 2px
+	.left-content
+		width: 25%
+		img
+			width: 90%
+		text-align: center
+	.right-content
+		width: 75%
+		float: right
+

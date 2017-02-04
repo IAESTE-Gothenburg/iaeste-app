@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif; }
 
 header, footer, main {
   position: fixed;
@@ -25,7 +26,8 @@ header {
 
 main {
   height: 80vh;
-  top: 10vh; }
+  top: 10vh;
+  overflow: scroll; }
 
 footer {
   bottom: 0; }
@@ -67,5 +69,32 @@ footer {
   background: white;
   border: 2px solid lightgrey;
   border-radius: 5px; }
+
+.internship {
+  width: 95%;
+  padding: 10px 3px;
+  background: rgba(0, 94, 151, 0.4);
+  border-radius: 2px;
+  margin: 5px auto;
+  color: #383838; }
+  .internship .left-content, .internship .right-content {
+    display: inline-block; }
+    .internship .left-content h2, .internship .left-content h3, .internship .right-content h2, .internship .right-content h3 {
+      margin: 0;
+      margin-left: 5px; }
+    .internship .left-content h2, .internship .right-content h2 {
+      font-size: 0.8rem;
+      margin-bottom: 2px; }
+    .internship .left-content h3, .internship .right-content h3 {
+      font-size: 0.6rem;
+      margin-bottom: 2px; }
+  .internship .left-content {
+    width: 25%;
+    text-align: center; }
+    .internship .left-content img {
+      width: 90%; }
+  .internship .right-content {
+    width: 75%;
+    float: right; }
 
 /*# sourceMappingURL=style.css.map */
