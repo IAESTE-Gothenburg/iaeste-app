@@ -1,0 +1,67 @@
+$theme-color: #005E97
+$highlight: rgba(50,50,50,0.1)
+
+=box($size)
+	height: $size
+	width: $size
+
+body
+	margin: 0
+
+header, footer
+	position: fixed
+	left: 0
+	width: 100%
+	height: 10vh
+	color: white
+	background: $theme-color
+
+header
+	top: 0
+	div
+		display: inline-block
+		h1
+			display: inherit
+			margin: 0
+			margin-right: 7px
+		label
+			+box(30px)
+
+.container
+	display: flex
+	justify-content: center
+	align-items: center
+
+footer
+	bottom: 0
+	nav
+		margin: auto
+		width: 98%
+		height: inherit
+		.nav-button
+			color: inherit
+			width: 18%
+			height: 100%
+			border: none
+			margin: 0 7px
+			padding: 2px 0
+				top: 4px
+			background: $highlight
+			h6
+				margin:
+					top: 2px
+					bottom: 2px
+
+#filter-options
+	display: none
+	position: absolute
+	top: 8.5vh
+	z-index: 1000
+	width: 90vw
+	min-height: 30vh
+	max-height: 75vh
+	overflow: scroll
+	margin: auto
+	background: white
+	border: 2px solid lightgrey
+	border-radius: 5px
