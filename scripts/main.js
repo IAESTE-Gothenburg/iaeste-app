@@ -151,6 +151,10 @@ function addInternships() {
 		textNode = document.createTextNode('Within the months: ' + data.internships[i].period)
 		text.appendChild(textNode);
 		rightContent.appendChild(text);
+		text = document.createElement('h3');
+		textNode = document.createTextNode('Fields: ' + data.internships[i].fieldAbbr)
+		text.appendChild(textNode);
+		rightContent.appendChild(text);
 		// Append content
 		container.appendChild(leftContent);
 		container.appendChild(rightContent);
