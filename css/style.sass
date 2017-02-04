@@ -1,5 +1,5 @@
 $theme-color: #005E97
-$highlight: rgba(50,50,50,0.1)
+$highlight: rgba(50,50,50,0.3)
 
 =box($size)
 	height: $size
@@ -46,11 +46,14 @@ footer
 			margin: 0 7px
 			padding: 2px 0
 				top: 4px
-			background: $highlight
+			background: $theme-color
 			h6
 				margin:
 					top: 2px
 					bottom: 2px
+		.active-nav
+			background: $highlight
+			border-radius: 5px
 
 #filter-options
 	display: none
