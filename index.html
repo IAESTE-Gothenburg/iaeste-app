@@ -28,13 +28,19 @@
 		</main>
 		<footer>
 			<nav class="container">
-				<button class="nav-button"><i class="fa fa-rss fa-3x" aria-hidden="true"></i><h6>Nyheter</h6></button>
-				<button class="nav-button active-nav"><i class="fa fa-file-text fa-3x" aria-hidden="true"></i><h6>Internships</h6></button>
-				<button class="nav-button"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i><h6>Om IAESTE</h6></button>
-				<button class="nav-button"><i class="fa fa-users fa-3x" aria-hidden="true"></i><h6>Engagera dig</h6></button>
-				<button class="nav-button"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><h6>Inställningar</h6></button>
+				<button class="nav-button" onclick="navTo(0)"><i class="fa fa-rss fa-3x" aria-hidden="true"></i><h6>Nyheter</h6></button>
+				<button class="nav-button active-nav" onclick="navTo(1)"><i class="fa fa-file-text fa-3x" aria-hidden="true"></i><h6>Internships</h6></button>
+				<button class="nav-button" onclick="navTo(2)"><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i><h6>Om IAESTE</h6></button>
+				<button class="nav-button" onclick="navTo(3)"><i class="fa fa-users fa-3x" aria-hidden="true"></i><h6>Engagera dig</h6></button>
+				<button class="nav-button" onclick="navTo(4)"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><h6>Inställningar</h6></button>
 			</nav>
 		</footer>
+		<script src="scripts/internships.js"></script>
 		<script src="scripts/main.js"></script>
+		<script src="scripts/navigation.js"></script>
+		<script src="scripts/newsfeed.js"></script>
+		<script src="scripts/about.js"></script>
+		<script src="scripts/engage.js"></script>
+		<script src="scripts/settings.js"></script>
 	</body>
 </html>
