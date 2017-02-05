@@ -2,10 +2,14 @@
 
 var mainContent;
 var navButtons;
+var headerTitle;
+var headerIcon;
 
 document.addEventListener('DOMContentLoaded', function(){
 	mainContent = document.getElementsByTagName('main')[0];
 	navButtons = document.getElementsByTagName('footer')[0].getElementsByTagName('button');
+	headerTitle = document.getElementById('header-title');
+	headerIcon = document.getElementById('header-icon');
 
 	addInternships();
 	addInternships();
@@ -13,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function addInternships() {
+	headerTitle.innerHTML = 'Internships';
+	headerIcon.style.display = 'initial';
 	for (var i = 0; i < data.internships.length; i++) {
+		var t = data.internships[i];
+
 		// Creates container for internship
 		var container = document.createElement('div');
 		container.classList.add('internship');
@@ -21,26 +29,25 @@ function addInternships() {
 		var leftContent = document.createElement('div');
 		leftContent.classList.add('left-content');
 		var image = document.createElement('img');
-		image.src = data.internships[i].countryImage;
+		image.src = t.countryImage;
 		leftContent.appendChild(image);
 
-		var location = data.internships[i].location;
+		var location = t.location;
 		addTextElement('h3', location, leftContent);
 
 		// Creates right side content
 		var rightContent = document.createElement('div');
 		rightContent.classList.add('right-content');
 		
-		var employer = data.internships[i].employer;
-		addTextElement('h2', employer, rightContent);
+		addTextElement('h2', t.employer, rightContent);
 
-		var weeks = 'Weeks Offered: ' + data.internships[i].nrOfWeeks;
+		var weeks = 'Weeks Offered: ' + t.nrOfWeeks;
 		addTextElement('h3', weeks, rightContent);
 
-		var period = 'Within the months: ' + data.internships[i].period;
+		var period = 'Within the months: ' + t.period;
 		addTextElement('h3', period, rightContent);
 
-		var fields = 'Fields: ' + data.internships[i].fieldAbbr;
+		var fields = 'Fields: ' + t.fieldAbbr;
 		addTextElement('h3', fields, rightContent);
 
 		// Append content

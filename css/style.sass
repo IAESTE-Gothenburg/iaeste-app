@@ -26,9 +26,9 @@ header
 		h1
 			display: inherit
 			margin: 0
-			margin-right: 7px
 		label
 			+box(30px)
+			margin-left: 7px
 
 main
 	height: 80vh
@@ -95,9 +95,8 @@ footer
 		left: 50%
 		transform: translateX(-50%)
 
-.internship
+.internship, .newsItem
 	width: 95%
-	height: 95px
 	padding: 10px 3px
 	background: rgba(255, 250, 250, 0.8)
 	border-radius: 2px
@@ -105,6 +104,9 @@ footer
 	color: #383838
 	border: 1px solid lightgrey
 	z-index: 10
+
+.internship
+	height: 95px
 	.left-content, .right-content
 		display: inline-block
 		h2, h3
@@ -125,4 +127,16 @@ footer
 	.right-content
 		width: 75%
 		float: right
+
+.newsItem
+	text-align: center
+	img
+		width: 98%
+		max-height: 160px
+		object-fit: cover
+	h2, h3
+		margin: 10px 5px 5px 5px
+	p
+		margin: 2px 5px 5px 5px
+		
 
