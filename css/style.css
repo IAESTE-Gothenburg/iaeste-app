@@ -5,7 +5,8 @@ body {
 header, footer, main {
   position: fixed;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
 
 header, footer {
   height: 10vh;
