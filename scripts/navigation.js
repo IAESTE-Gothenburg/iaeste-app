@@ -3,6 +3,8 @@ function navTo(target) {
 	switch(target) {
 	    case 0:
 	    	addNewsfeed();
+	    	addNewsfeed();
+	    	addNewsfeed();
 	        break;
 	    case 1:
 	        addInternships();

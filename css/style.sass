@@ -21,6 +21,9 @@ header, footer
 	background: $theme-color
 
 header
+	#navBack
+		position: fixed
+		left: 20px
 	top: 0
 	div
 		display: inline-block
@@ -139,5 +142,44 @@ footer
 		margin: 10px 5px 5px 5px
 	p
 		margin: 2px 5px 5px 5px
+
+article#internship-view
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	align-content: flex-start
+	width: 100%
+	min-height: 80vh
+	background: white
+	position: absolute
+	overflow: scroll
+	top: 0
+	z-index: 9000
+	.flag-container, .location
+		max-height: 140px
+		margin-top: 15px
+	.flag-container
+		width: 50%
+		img
+			width: 80%
+			margin-left: 15px
+	.location
+		width: 50%
+		h3, h4, h5, p
+			margin: 0
+			padding: 0
+			width: 100%
+	h3, h4, h5, p
+		padding: 0 15px
+		width: 100%
+		margin:
+			top: 5px
+			bottom: 2px
+	ul
+		width: 100%
+		margin:
+			top: 2px
+			bottom: 2px
+
 		
 

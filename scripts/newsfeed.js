@@ -6,6 +6,7 @@ function addNewsfeed() {
 
 		var container = document.createElement('article');
 		container.classList.add('newsItem');
+		container.id = t.id;
 
 		var image = document.createElement('img');
 		image.src = t.image;
@@ -30,6 +31,7 @@ function addNewsfeed() {
 var news = {
 	story: [
 	{
+		id: 'id-1',
 		name: 'NM i Göteborg',
 		startDate: '24 februari',
 		endDate: '26 februari',
@@ -40,26 +42,7 @@ var news = {
 		image: 'images/news/NM.jpg'
 	},
 	{
-		name: 'IAESTE Connect Conference 2017',
-		startDate: '26 april',
-		endDate: '30 april',
-		startTime: '16:00',
-		endTime: '11:00',
-		location: 'Stockholm',
-		description: '',
-		image: 'images/news/connect.jpg'
-	},
-	{
-		name: 'NM i Göteborg',
-		startDate: '24 februari',
-		endDate: '26 februari',
-		startTime: '17:00',
-		endTime: '15:00',
-		location: 'Göteborg',
-		description: '',
-		image: 'images/news/NM.jpg'
-	},
-	{
+		id: 'id-2',
 		name: 'IAESTE Connect Conference 2017',
 		startDate: '26 april',
 		endDate: '30 april',
