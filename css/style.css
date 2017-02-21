@@ -166,27 +166,30 @@ article#internship-view {
       margin: 0;
       padding: 0;
       width: 100%;
-      font-size: 0.8em; }
+      font-size: 0.9em; }
     article#internship-view .location h3 {
-      font-size: 1em; }
+      font-size: 1.1em; }
     article#internship-view .location h6 {
       margin: 0;
       margin-bottom: 3px;
       margin-top: 2px; }
-  article#internship-view h3, article#internship-view h4, article#internship-view h5, article#internship-view p {
+  article#internship-view h3, article#internship-view h4, article#internship-view h5, article#internship-view p, article#internship-view ul {
     padding: 0 15px;
     width: 100%;
     margin-top: 5px;
-    margin-bottom: 5px; }
-  article#internship-view h3, article#internship-view p {
+    margin-bottom: 5px;
+    font-size: 1.2em; }
+  article#internship-view h3 {
     margin-top: 10px; }
+  article#internship-view p:last-child {
+    margin-bottom: 15px; }
   article#internship-view ul {
-    width: 100%;
     list-style: none;
-    padding-left: 20px;
     margin-top: 3px;
     margin-bottom: 3px; }
   article#internship-view h5 {
-    color: grey; }
+    color: grey;
+    margin-bottom: 0;
+    margin-top: 7px; }
 
 /*# sourceMappingURL=style.css.map */

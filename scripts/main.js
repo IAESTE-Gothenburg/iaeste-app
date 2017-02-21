@@ -128,8 +128,23 @@ function viewInternship(e) {
 			}
 			
 			// Add description
-			//addTextElement('h5', 'Description', container);
+			addTextElement('h5', 'Description', container);
 			addTextElement('p', t.description, container);
+
+			// Study level
+			addTextElement('h5', 'Study level', container);
+			addTextElement('p', t.studyLevel, container);
+
+			// Languages
+			addTextElement('h5', 'Languages', container);
+			var list = document.createElement('ul');
+			for (var i = 0; i < t.languages.length; i++) { addTextElement('li', t.languages[i], list); }
+			container.appendChild(list);
+
+			// Deadline
+			// Study level
+			addTextElement('h5', 'Deadline for nomination', container);
+			addTextElement('p', '28 February 2017', container);
 
 			navIcon.style.display = 'block';
 			mainContent.appendChild(container);
