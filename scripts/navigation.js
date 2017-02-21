@@ -1,5 +1,6 @@
 function navTo(target) {
 	mainContent.innerHTML = '';
+	mainContent.scrollTop = 0;
 	navIcon.style.display = 'none';
 	switch(target) {
 	    case 0:
