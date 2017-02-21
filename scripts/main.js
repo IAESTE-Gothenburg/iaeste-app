@@ -81,6 +81,7 @@ function addTextElement(type, text, appendTo) {
 }
 
 function viewInternship(e) {
+	mainContent.scrollTop = 0;
 	var id = e.currentTarget.id;
 	mainContent.innerHTML = '';
 	for (var i = 0; i < data.internships.length; i++) {
