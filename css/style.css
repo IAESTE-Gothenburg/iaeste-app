@@ -17,7 +17,9 @@ header {
   top: 0; }
   header #navBack {
     position: fixed;
-    left: 20px; }
+    left: 20px;
+    top: 5vh;
+    transform: translateY(-50%); }
   header div {
     display: inline-block; }
     header div h1 {
