@@ -1,5 +1,6 @@
 function navTo(target) {
 	mainContent.innerHTML = '';
+	navIcon.style.display = 'none';
 	switch(target) {
 	    case 0:
 	    	addNewsfeed();

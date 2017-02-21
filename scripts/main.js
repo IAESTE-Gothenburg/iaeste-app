@@ -5,6 +5,7 @@ var header;
 var navButtons;
 var headerTitle;
 var headerIcon;
+var navIcon;
 
 document.addEventListener('DOMContentLoaded', function(){
 	mainContent = document.getElementsByTagName('main')[0];
@@ -16,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function(){
 	addInternships();
 	addInternships();
 	addInternships();
+
+	// Add nav icon
+	var icon = document.createElement('i');
+	icon.classList.add('fa');
+	icon.classList.add('fa-arrow-left');
+	icon.classList.add('fa-2x');
+	icon.id = 'navBack';
+	icon.onclick = navBack;
+	icon.style.display = 'none';
+	header.appendChild(icon);
+	navIcon = document.getElementById('navBack');
 });
 
 function addInternships() {
@@ -90,8 +102,11 @@ function viewInternship(e) {
 			var locationContainer = document.createElement('div');
 			locationContainer.classList.add('location');
 			addTextElement('h3', t.refNr, locationContainer);
-			addTextElement('h4', t.country, locationContainer);
-			addTextElement('p', t.location, locationContainer);
+			addTextElement('h4', t.location + ', ' + t.country, locationContainer);
+			addTextElement('h6', 'Number of weeks', locationContainer)
+			addTextElement('p', t.nrOfWeeks, locationContainer);
+			addTextElement('h6', 'Time period', locationContainer);
+			addTextElement('p', t.period, locationContainer);
 			container.appendChild(locationContainer);
 
 			// Employer heading
@@ -104,26 +119,18 @@ function viewInternship(e) {
 			container.appendChild(list);
 
 			// Specialization list
-			addTextElement('h5', 'Specialization', container);
-			var list = document.createElement('ul');
-			for (var i = 0; i < t.field.length; i++) { addTextElement('li', t.field[i], list); }
-			container.appendChild(list);
-
+			if (t.specialization.length > 0) {
+				addTextElement('h5', 'Specialization', container);
+				var list = document.createElement('ul');
+				for (var i = 0; i < t.specialization.length; i++) { addTextElement('li', t.specialization[i], list); }
+				container.appendChild(list);
+			}
+			
 			// Add description
+			//addTextElement('h5', 'Description', container);
 			addTextElement('p', t.description, container);
 
-
-
-			// Add nav icon
-			var icon = document.createElement('i');
-			icon.classList.add('fa');
-			icon.classList.add('fa-arrow-left');
-			icon.classList.add('fa-2x');
-			icon.id = 'navBack';
-			icon.onclick = navBack;
-			header.appendChild(icon);
-
-
+			navIcon.style.display = 'block';
 			mainContent.appendChild(container);
 			break;
 		}
@@ -132,8 +139,6 @@ function viewInternship(e) {
 
 function navBack() {
 	navTo(1);
-	var icon = document.getElementById('navBack');
-	header.removeChild(icon);
 }
 
 

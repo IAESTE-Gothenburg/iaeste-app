@@ -43,7 +43,7 @@ var data = {internships: [
 		website: '',
 		field: ['Mechanical Engineering'],
 		fieldAbbr: 'M',
-		specialization: [''],
+		specialization: [],
 		nrOfWeeks: '22 - 24',
 		period: '01-JUN-2017 - 30-NOV-2017'
 },
