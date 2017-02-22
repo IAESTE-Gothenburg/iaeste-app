@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	// Add nav icon
 	var icon = document.createElement('i');
 	icon.classList.add('fa');
-	icon.classList.add('fa-arrow-left');
-	icon.classList.add('fa-2x');
+	icon.classList.add('fa-chevron-left');
+	icon.classList.add('fa-lg');
 	icon.id = 'navBack';
 	icon.onclick = navBack;
 	icon.style.display = 'none';
@@ -61,6 +61,8 @@ function addInternships() {
 		
 		addTextElement('h2', t.employer, rightContent);
 
+		addTextElement('h6', t.refNr, rightContent);
+
 		var weeks = 'Weeks Offered: ' + t.nrOfWeeks;
 		addTextElement('h3', weeks, rightContent);
 
@@ -91,6 +93,9 @@ function viewInternship(e) {
 	for (var i = 0; i < data.internships.length; i++) {
 		var t = data.internships[i];
 		if (t.refNr == id) {
+			headerTitle.innerHTML = t.refNr;
+			headerIcon.style.display = 'none';
+
 			// Create container element
 			var container = document.createElement('article');
 			container.id = 'internship-view';
@@ -106,7 +111,7 @@ function viewInternship(e) {
 			// Create location container
 			var locationContainer = document.createElement('div');
 			locationContainer.classList.add('location');
-			addTextElement('h3', t.refNr, locationContainer);
+			//addTextElement('h3', t.refNr, locationContainer);
 			addTextElement('h4', t.location + ', ' + t.country, locationContainer);
 			addTextElement('h6', 'Number of weeks', locationContainer)
 			addTextElement('p', t.nrOfWeeks, locationContainer);

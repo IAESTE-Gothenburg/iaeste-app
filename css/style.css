@@ -24,7 +24,8 @@ header {
     display: inline-block; }
     header div h1 {
       display: inherit;
-      margin: 0; }
+      margin: 0;
+      font-size: 1.5rem; }
     header div label {
       height: 30px;
       width: 30px;
@@ -119,10 +120,11 @@ footer {
   z-index: 10; }
 
 .internship {
-  height: 95px; }
+  display: flex;
+  flex-direction: row; }
   .internship .left-content, .internship .right-content {
-    display: inline-block; }
-    .internship .left-content h2, .internship .left-content h3, .internship .right-content h2, .internship .right-content h3 {
+    display: block; }
+    .internship .left-content h2, .internship .left-content h3, .internship .left-content h6, .internship .right-content h2, .internship .right-content h3, .internship .right-content h6 {
       margin: 0;
       margin-left: 5px; }
     .internship .left-content h2, .internship .right-content h2 {
@@ -130,6 +132,10 @@ footer {
       margin-bottom: 2px; }
     .internship .left-content h3, .internship .right-content h3 {
       font-size: 0.65rem;
+      margin-bottom: 2px; }
+    .internship .left-content h6, .internship .right-content h6 {
+      color: #383838;
+      margin-top: 2px;
       margin-bottom: 2px; }
   .internship .left-content {
     width: 25%;

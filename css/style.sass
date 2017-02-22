@@ -32,6 +32,7 @@ header
 		h1
 			display: inherit
 			margin: 0
+			font-size: 1.5rem
 		label
 			+box(30px)
 			margin-left: 7px
@@ -126,10 +127,11 @@ footer
 	z-index: 10
 
 .internship
-	height: 95px
+	display: flex
+	flex-direction: row
 	.left-content, .right-content
-		display: inline-block
-		h2, h3
+		display: block
+		h2, h3, h6
 			margin: 0
 			margin-left: 5px
 		h2
@@ -138,6 +140,11 @@ footer
 		h3
 			font-size: 0.65rem
 			margin-bottom: 2px
+		h6
+			color: #383838
+			margin:
+				top: 2px
+				bottom: 2px
 	.left-content
 		width: 25%
 		img
