@@ -220,4 +220,29 @@ article#internship-view {
     margin-bottom: 0;
     margin-top: 7px; }
 
+@media (min-width: 550px) {
+  html {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    html body {
+      display: block;
+      width: 375px;
+      height: 667px;
+      border: 10px solid #383838;
+      border-radius: 5px; }
+      html body header, html body footer, html body main, html body #internship-view, html body #navBack {
+        position: static; }
+      html body header, html body footer {
+        height: 60px; }
+      html body main {
+        height: 547px; }
+      html body #navBack {
+        position: relative;
+        left: -75px;
+        top: 7px; } }
+
 /*# sourceMappingURL=style.css.map */

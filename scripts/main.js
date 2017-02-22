@@ -15,23 +15,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	headerIcon = document.getElementById('header-icon');
 	header = document.getElementsByTagName('header')[0];
 	filterList = document.getElementById('filter-options').getElementsByTagName('section')[0];
+	navIcon = document.getElementById('navBack');
 
 	addInternships();
 	addInternships();
 	addInternships();
 
 	addFilterList();
-
-	// Add nav icon
-	var icon = document.createElement('i');
-	icon.classList.add('fa');
-	icon.classList.add('fa-chevron-left');
-	icon.classList.add('fa-lg');
-	icon.id = 'navBack';
-	icon.onclick = navBack;
-	icon.style.display = 'none';
-	header.appendChild(icon);
-	navIcon = document.getElementById('navBack');
 });
 
 function addInternships() {
@@ -159,6 +149,7 @@ function viewInternship(e) {
 			var link = document.createElement('a');
 			link.href = 'https://portal.iaeste.se';
 			link.id = 'sok-har';
+			link.target = '_blank';
 			var text = document.createTextNode('Till ansökan');
 			link.appendChild(text);
 			container.appendChild(link);
