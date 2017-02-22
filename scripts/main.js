@@ -155,6 +155,14 @@ function viewInternship(e) {
 			addTextElement('h5', 'Deadline for nomination', container);
 			addTextElement('p', '28 February 2017', container);
 
+			// Button
+			var link = document.createElement('a');
+			link.href = 'https://portal.iaeste.se';
+			link.id = 'sok-har';
+			var text = document.createTextNode('Till ansökan');
+			link.appendChild(text);
+			container.appendChild(link);
+
 			navIcon.style.display = 'block';
 			mainContent.appendChild(container);
 			break;
