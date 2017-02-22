@@ -6,6 +6,7 @@ var navButtons;
 var headerTitle;
 var headerIcon;
 var navIcon;
+var filterList;
 
 document.addEventListener('DOMContentLoaded', function(){
 	mainContent = document.getElementsByTagName('main')[0];
@@ -13,10 +14,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	headerTitle = document.getElementById('header-title');
 	headerIcon = document.getElementById('header-icon');
 	header = document.getElementsByTagName('header')[0];
+	filterList = document.getElementById('filter-options').getElementsByTagName('section')[0];
 
 	addInternships();
 	addInternships();
 	addInternships();
+
+	addFilterList();
 
 	// Add nav icon
 	var icon = document.createElement('i');
@@ -155,6 +159,23 @@ function viewInternship(e) {
 
 function navBack() {
 	navTo(1);
+}
+
+function addFilterList() {
+	var listItems = ['IT', 'Electrical engineering', 'Mechanical engineering', 'Civil engineering', 'Architecture'];
+	var list = document.createElement('ul');
+	for (var i = 0; i < listItems.length; i++) {
+		var listTag = document.createElement('li');
+		var listElement = document.createElement('label');
+		var input = document.createElement('input');
+		input.type = 'checkbox';
+		listElement.appendChild(input);
+		var text = document.createTextNode(listItems[i]);
+		listElement.appendChild(text);
+		listTag.appendChild(listElement)
+		list.appendChild(listTag);
+	}
+	filterList.appendChild(list);
 }
 
 

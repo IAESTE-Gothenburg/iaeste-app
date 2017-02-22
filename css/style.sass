@@ -82,15 +82,29 @@ footer
 	transform: translateX(-50%)
 	z-index: 1000
 	width: 90vw
-	min-height: 30vh
 	max-height: 75vh
 	background: rgba(255,255,255,1)
 	border: 2px solid lightgrey
 	border-radius: 5px
 	section
-		width: inherit
+		width: 90%
+		margin: auto
 		height: inherit
 		overflow: scroll
+		ul
+			list-style: none
+			font-size: 1.2em
+			padding: 0
+			li
+				line-height: 2
+				border-bottom: 1px solid lightgrey
+				&:first-child
+					border-top: 1px solid lightgrey
+				input[type="checkbox"]
+					/* -webkit-appearance: none */
+				label
+					display: block
+					width: 100%
 	&::before
 		content: "\A"
 		border-left: 35px solid transparent
