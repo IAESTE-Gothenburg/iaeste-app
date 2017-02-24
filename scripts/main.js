@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
 function addInternships() {
 	headerTitle.innerHTML = 'Internships';
 	headerIcon.style.display = 'initial';
+	navIcon.onclick = navBackInternships;
 	for (var i = 0; i < data.internships.length; i++) {
 		var t = data.internships[i];
 
@@ -161,8 +162,12 @@ function viewInternship(e) {
 	}
 }
 
-function navBack() {
+function navBackInternships() {
 	navTo(1);
+}
+
+function navBackNewsfeed() {
+	navTo(0);
 }
 
 function addFilterList() {

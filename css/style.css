@@ -256,7 +256,7 @@ article#internship-view {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 1.2em; }
+    font-size: 1.1em; }
   article#internship-view h3 {
     margin-top: 10px; }
   article#internship-view ul {
@@ -266,7 +266,8 @@ article#internship-view {
   article#internship-view h5 {
     color: grey;
     margin-bottom: 0;
-    margin-top: 7px; }
+    margin-top: 7px;
+    font-size: 0.9em; }
 
 @media (min-width: 550px) {
   html {

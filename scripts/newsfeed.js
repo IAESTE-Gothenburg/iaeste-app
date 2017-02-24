@@ -1,6 +1,7 @@
 function addNewsfeed() {
 	headerTitle.innerHTML = 'Nyheter';
 	headerIcon.style.display = 'initial';
+	navIcon.onclick = navBackNewsfeed;
 	for (var i = 0; i < news.story.length; i++) {
 		var t = news.story[i];
 
